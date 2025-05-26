@@ -1,0 +1,70 @@
+.dashboard-layout {
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px; /* Adjust the width of the sidebar */
+  
+  color: #fff;
+  padding: 20px;
+  position: fixed; /* Fix the sidebar in place */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.main-content {
+  margin-left: 250px; /* Push the content to the right to make space for the sidebar */
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  transition: margin-left 0.3s; /* Smooth transition for sidebar */
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.custom-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-img {
+  width: 60px;
+  height: 60px;
+}
+
+.card-text {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.table-container {
+  margin-top: 40px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
