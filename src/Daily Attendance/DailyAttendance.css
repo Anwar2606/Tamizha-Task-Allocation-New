@@ -10,10 +10,12 @@
   background-position: center;
 }
 
+/* Sidebar */
 .attendance-sidebar {
   width: 200px;
 }
 
+/* Main content */
 .attendance-main {
   width: 100%;
   flex-grow: 1;
@@ -21,12 +23,14 @@
   margin-left: 69px;
 }
 
+/* Heading */
 .attendance-heading {
   font-size: 28px;
   margin-bottom: 20px;
   color: #0f172a;
 }
 
+/* Widgets */
 .attendance-widgets {
   display: flex;
   gap: 20px;
@@ -69,6 +73,7 @@
   width: 100%;
 }
 
+/* Table */
 .attendance-table {
   width: 100%;
   border-collapse: collapse;
@@ -108,7 +113,7 @@
   font-size: 14px;
 }
 
-/* Responsive for tablets and smaller desktops */
+/* Responsive for tablets */
 @media screen and (max-width: 768px) {
   .attendance-container {
     flex-direction: column;
@@ -126,46 +131,58 @@
 
   .attendance-heading {
     font-size: 22px;
-    text-align: center;
-  }
-
-  .attendance-widget {
-    min-width: 100%;
-    padding: 16px;
-  }
-
-  .attendance-table th,
-  .attendance-table td {
-    padding: 10px 12px;
-    font-size: 14px;
+    text-align: left;
   }
 
   .attendance-widgets {
     flex-direction: column;
     gap: 16px;
   }
+
+  .attendance-widget {
+    min-width: 100%;
+    padding: 16px;
+    text-align: left; /* Align widget content to the left */
+  }
+
+  .attendance-table th,
+  .attendance-table td {
+    padding: 10px 12px;
+    font-size: 14px;
+    text-align: left; /* Align table content left */
+  }
 }
 
-/* Responsive for mobile phones and very small screens */
+/* Responsive for mobile phones */
 @media screen and (max-width: 480px) {
   .attendance-heading {
     font-size: 18px;
     margin-bottom: 16px;
-  }
-
-  .attendance-widget p {
-    font-size: 18px;
-  }
-
-  .attendance-widget h4 {
-    font-size: 14px;
+    text-align: left; /* Changed from center to left */
   }
 
   .attendance-main {
     padding: 15px 10px;
   }
 
-  /* Convert table into block for better mobile readability */
+  .attendance-widget {
+    text-align: left; /* Ensure left alignment */
+  }
+
+  .attendance-widget p {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .attendance-widget h4 {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .attendance-table-container {
+    overflow-x: auto;
+  }
+
   .attendance-table thead {
     display: none;
   }
@@ -181,21 +198,23 @@
   .attendance-table tr {
     margin-bottom: 16px;
     border-bottom: 2px solid #e2e8f0;
+    padding: 10px 0;
   }
 
   .attendance-table td {
-    padding-left: 50%;
+    padding-left: 16px; /* Reduced padding */
     position: relative;
-    text-align: right;
+    text-align: left; /* Align text to left */
     font-size: 14px;
+    border-bottom: 1px solid #e2e8f0;
   }
 
   .attendance-table td::before {
     content: attr(data-label);
     position: absolute;
-    left: 16px;
-    width: 45%;
-    padding-left: 10px;
+    left: 0;
+    width: 100%;
+    padding-left: 16px;
     font-weight: 600;
     text-align: left;
     color: #475569;
