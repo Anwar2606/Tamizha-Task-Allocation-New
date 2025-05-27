@@ -68,3 +68,28 @@
   border: 1px solid #ddd;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .card-wrapper {
+    justify-content: center;
+  }
+
+  .custom-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}

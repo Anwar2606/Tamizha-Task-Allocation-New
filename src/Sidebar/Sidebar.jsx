@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FaBars, FaHome, FaUser, FaTasks,
@@ -17,7 +17,13 @@ const Sidebar = () => {
   const closeSidebar = () => {
     setIsOpen(false);
   };
-
+useEffect(() => {
+  if (isOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+}, [isOpen]);
   return (
     <>
       {/* Mobile Toggle Button */}
