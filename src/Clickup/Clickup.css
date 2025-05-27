@@ -9,6 +9,8 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* Sidebar */
@@ -22,6 +24,7 @@
   flex-grow: 1;
   padding: 30px;
   margin-left: 69px;
+  box-sizing: border-box;
 }
 
 /* Heading */
@@ -101,10 +104,6 @@
   text-align: left;
 }
 
-.clickup-table tbody tr:nth-child(even) {
-  background-color: #f1f5f9;
-}
-
 .clickup-table tbody tr:hover {
   background-color: #e2e8f0;
 }
@@ -117,20 +116,37 @@
 }
 
 /* Responsive styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
   .clickup-container {
     flex-direction: column;
-    background-attachment: scroll; /* better performance on mobile */
+    padding: 0;
   }
 
   .clickup-sidebar {
     width: 100%;
-    padding: 12px 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85); /* optional */
   }
 
   .clickup-main {
     margin-left: 0;
-    padding: 20px;
+    width: 100%;
+    padding: 15px 10px;
+  }
+
+  .clickup-heading {
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
   }
 
   .clickup-widgets {
@@ -139,27 +155,8 @@
   }
 
   .clickup-widget {
+    min-width: 100%;
     width: 100%;
-  }
-
-  .clickup-heading {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .clickup-table-container {
-    overflow-x: auto;
-  }
-
-  .clickup-table {
-    min-width: 600px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .clickup-heading {
-    font-size: 18px;
-    margin-bottom: 16px;
   }
 
   .clickup-widget p {
@@ -170,11 +167,10 @@
     font-size: 14px;
   }
 
-  .clickup-main {
-    padding: 15px 10px;
+  .clickup-table-container {
+    overflow-x: hidden;
   }
 
-  /* Mobile Table Layout */
   .clickup-table thead {
     display: none;
   }
@@ -184,7 +180,8 @@
   .clickup-table tr,
   .clickup-table td {
     display: block;
-    width: 100%;
+    width: 80%;
+    border-radius: 2%;
   }
 
   .clickup-table tr {
@@ -197,6 +194,7 @@
     position: relative;
     text-align: right;
     font-size: 14px;
+    box-sizing: border-box;
   }
 
   .clickup-table td::before {
