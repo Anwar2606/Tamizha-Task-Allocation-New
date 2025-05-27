@@ -134,7 +134,8 @@
     width: 100%;
     padding: 10px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.85); /* optional */
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Added */
   }
 
   .clickup-main {
@@ -157,6 +158,10 @@
   .clickup-widget {
     min-width: 100%;
     width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Added */
+    padding: 12px;
+    background-color: #fff; /* Optional: To enhance shadow visibility */
+    border-radius: 8px;     /* Optional: Rounded corners */
   }
 
   .clickup-widget p {
@@ -180,13 +185,17 @@
   .clickup-table tr,
   .clickup-table td {
     display: block;
-    width: 70%;
+    width: 77%;
     border-radius: 2%;
   }
 
   .clickup-table tr {
     margin-bottom: 16px;
     border-bottom: 2px solid #e2e8f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Added */
+    padding: 10px;
+    background-color: #fff; /* Optional */
+    border-radius: 6px;     /* Optional */
   }
 
   .clickup-table td {
@@ -208,3 +217,4 @@
     color: #475569;
   }
 }
+
