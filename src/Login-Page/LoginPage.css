@@ -77,3 +77,35 @@
 .login-footer a:hover {
   text-decoration: underline;
 }
+/* Mobile Responsive Styles */
+@media screen and (max-width: 480px) {
+  .login-box {
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .login-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .login-form {
+    gap: 12px;
+  }
+
+  .login-input {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .login-button {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .login-footer {
+    font-size: 13px;
+    margin-top: 12px;
+  }
+}
