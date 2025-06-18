@@ -428,6 +428,20 @@ const maxEmployee = employeeMonthlyChartData.reduce(
         }}>
          
         </div>
+{/* Watermark */}
+<div style={{
+  position: "relative",
+  bottom: "10px",
+  right: "10px",
+  textAlign: "center",
+  fontSize: "20px",
+  fontWeight: "bold",
+  color: "black",
+  zIndex: 1000,
+  pointerEvents: "none",
+}}>
+  Created by Anwar
+</div>
 
         {/* Monthly Employee Hours Chart */}
        

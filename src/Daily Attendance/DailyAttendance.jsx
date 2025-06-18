@@ -210,6 +210,7 @@ const DailyAttendance = () => {
                       <option value="Present">Present</option>
                       <option value="Absent">Absent</option>
                       <option value="Half Day">Half Day</option>
+                      <option value="Casual Leave">Casual Leave</option>
                     </select>
                   </td>
                   <td>

@@ -153,6 +153,7 @@ const Trackabi = () => {
                     <option value="">Select Status</option>
                     <option value="yes">Completed</option>
                     <option value="no">Incomplete</option>
+                    <option value="leave">Leave</option>
                   </select>
                   {saving === emp.id && (
                     <span className="clickup-saving-text">Saving...</span>
